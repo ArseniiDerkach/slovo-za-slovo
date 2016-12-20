@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Слово за слово</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+  <form id="letters">
+    <div class="row">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="0">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="1">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="2">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="3">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="4">
+    </div>
+    <div class="row">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="5">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="6">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="7">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="8">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="9">
+    </div>
+    <div class="row">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="10">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="11">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="12">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="13">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="14">
+    </div>
+    <div class="row">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="15">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="16">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="17">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="18">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="19">
+    </div>
+    <div class="row">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="20">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="21">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="22">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="23">
+      <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="24">
+    </div>
+  </form>
+  <script type="text/javascript">
+  /* функция перехода от одного поля к другому при вводе букв и замене букв при выделении клетки */
+    $('.letter_input').on('input', function() {
+      $id = $(this).attr("id");
+      console.log(isBorder($id));
+      // console.log($id);
+      $next=++$id;
+      // console.log($next);
+      $('#'+$next).focus();
+      $('#'+$next).select();
+    });
+    function isBorder(i) {
+      if ((i<5)||(i>19)||(i%5==0)||(i%5==4)) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+    function findNearCells(i) {
+
+    }
+  </script>
+</body>
+</html>

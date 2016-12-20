@@ -1,0 +1,10 @@
+.row {
+  margin: 5px
+}
+.letter_input {
+  width: 57px;
+  height: 57px;
+  text-align: center;
+  font-size: 45px;
+  border: 1px solid #ccc;
+}
