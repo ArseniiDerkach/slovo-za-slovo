@@ -45,29 +45,10 @@
       <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="23">
       <input type="text" class="letter_input" maxlength="1" autocomplete="off" id="24">
     </div>
+    <button class="ready">Find words</button>
+    <button class=clear>Clear letters</button>
   </form>
-  <script type="text/javascript">
-  /* функция перехода от одного поля к другому при вводе букв и замене букв при выделении клетки */
-    $('.letter_input').on('input', function() {
-      $id = $(this).attr("id");
-      console.log(isBorder($id));
-      // console.log($id);
-      $next=++$id;
-      // console.log($next);
-      $('#'+$next).focus();
-      $('#'+$next).select();
-    });
-    function isBorder(i) {
-      if ((i<5)||(i>19)||(i%5==0)||(i%5==4)) {
-        return true;
-      }
-      else {
-        return false;
-      }
-    }
-    function findNearCells(i) {
-
-    }
-  </script>
+  <script type="text/javascript" src="functions.js"></script>
+  <script type="text/javascript" src="events.js"></script>
 </body>
 </html>
